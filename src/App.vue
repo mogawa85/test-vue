@@ -1,28 +1,57 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="current-id">
+  <h1>Hi Veronica! Welcome to the viva-LA-vue Workshop!</h1>
+  <div> I am a developer named {{ firstName }}{{ lastName }}. Watch me as I code in Vue.js! </div>
+
+  <p>
+    My First Name is: <input type="text" v-model="firstName">
+    <br>
+    My Last Name is: <input type="text" v-model="lastName">
+  </p>
+  <div>
+    <button @click="doSomething(!myBoolean)"> Toggle Me </button> This is our boolean: {{ myBoolean }}
   </div>
+  <!-- <div>
+    <img v-if="myBoolean" src="http://www.fillster.com/images/pictures/10p.jpg">
+  </div> -->
+  <div style="display:flex; align-items: center; justify-content: center;">
+    <bouncing-ball ballcolor="red"></bouncing-ball>
+    <bouncing-ball ballcolor="rgb(255,255,0)"></bouncing-ball>
+    <bouncing-ball></bouncing-ball>
+    <bouncing-ball ballcolor="#ADFF2F"></bouncing-ball>
+    <bouncing-ball ballcolor="cornflowerblue"></bouncing-ball>
+  </div>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import BouncingBall from "./components/BouncingBall.vue"
 export default {
-  name: 'App',
+  data() {
+    return {
+      firstName: 'Miki',
+      lastName: 'Ogawa',
+      myBoolean: true,
+    }
+  },
+  methods: {
+    doSomething(boolean) {
+      this.myBoolean = boolean
+    }
+  },
   components: {
-    HelloWorld
+    BouncingBall
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+#current-id{
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #42b883;
   margin-top: 60px;
 }
-</style>
+  </style>
