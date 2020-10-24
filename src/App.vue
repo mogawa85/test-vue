@@ -1,7 +1,7 @@
 <template>
 <div id="current-id">
   <h1>Hi Veronica! Welcome to the viva-LA-vue Workshop!</h1>
-  <div> I am a developer named {{ firstName }}{{ firstName }}. Watch me as I code in Vue.js! </div>
+  <div> I am a developer named {{ firstName }}{{ lastName }}. Watch me as I code in Vue.js! </div>
 
   <p>
     My First Name is: <input type="text" v-model="firstName">
