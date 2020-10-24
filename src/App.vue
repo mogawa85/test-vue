@@ -5,8 +5,8 @@
 
   <p>
     My First Name is: <input type="text" v-model="firstName">
-    <br>
-    My Last Name is: <input type="text" v-model="lastName">
+    <!-- <br>
+    My Last Name is: <input type="text" v-model="lastName"> -->
   </p>
   <div>
     <button @click="doSomething(!myBoolean)"> Toggle Me </button> This is our boolean: {{ myBoolean }}
