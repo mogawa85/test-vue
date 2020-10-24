@@ -15,8 +15,6 @@
     <img v-if="myBoolean" src="http://www.fillster.com/images/pictures/10p.jpg">
   </div> -->
   <div style="display:flex; align-items: center; justify-content: center;">
-    <bouncing-ball ballcolor="red"></bouncing-ball>
-    <bouncing-ball ballcolor="rgb(255,255,0)"></bouncing-ball>
     <bouncing-ball></bouncing-ball>
     <bouncing-ball ballcolor="#ADFF2F"></bouncing-ball>
     <bouncing-ball ballcolor="cornflowerblue"></bouncing-ball>
